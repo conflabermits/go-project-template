@@ -4,20 +4,18 @@ import (
 	"bytes"
 	"io"
 	"os"
-	"strings"
 	"testing"
 
 	"github.com/chris/go-project-template/internal/common"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestHello(t *testing.T) {
 	// Capture the output of the Hello function
 	output := captureOutput(common.Hello)
 
-	// Check if the output matches "Hello world"
-	if !strings.Contains(output, "Hello world") {
-		t.Errorf("Expected 'Hello world', but got '%s'", output)
-	}
+	// Use testify's assert to check the output
+	assert.Contains(t, output, "Hello world", "Output should contain 'Hello world'")
 }
 
 // Helper function to capture output from a function
