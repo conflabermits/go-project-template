@@ -3,8 +3,8 @@ FROM golang:1.24 as builder
 
 WORKDIR /app
 
-# Copy go.mod and go.sum files
-COPY go.mod go.sum ./
+# Copy go.mod files
+COPY go.mod ./
 
 # Download dependencies
 RUN go mod download

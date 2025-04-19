@@ -1,3 +1,3 @@
 module github.com/chris/go-project-template
 
-go 1.20
+go 1.24
