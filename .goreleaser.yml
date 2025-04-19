@@ -113,5 +113,5 @@ dockers:
     extra_files:
       - go.mod
       - go.sum
-      - cmd/**
-      - internal/**
+      - cmd
+      - internal
