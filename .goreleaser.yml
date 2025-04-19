@@ -100,3 +100,14 @@ changelog:
       order: 400
     - title: Other work
       order: 9999
+
+dockers:
+  - image_templates:
+      - "ghcr.io/conflabermits/go-project-template:{{ .Version }}"
+    dockerfile: Dockerfile
+    build_flag_templates:
+      - "--pull"
+      - "--platform=linux/amd64"
+    use: buildx
+    skip_push: false
+    goarch: amd64
